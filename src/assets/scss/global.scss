@@ -1,0 +1,19 @@
+.textClearOpacity {
+  opacity: 1 !important;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+form.form {
+  p {
+    margin-bottom: 5px;
+
+    &.groupTitle {
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+  }
+}

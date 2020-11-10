@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@": ["src/"]
+    },
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "module": "es6",
+    "moduleResolution": "node",
+    "target": "es5",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "types": [
+      "node",
+      "vuetify"
+    ]
+  },
+  "include": [
+    "./src/**/*", "../Modules/Hongbao/OperationLog/OperationLogModel.cs", "../Modules/HbBonus/OperationLog/OperationLog_vue.cshtml"
+  ],
+  "exclude": [
+    "./node_modules",
+    "./src/interface/FrontendInterface"
+  ]
+}
