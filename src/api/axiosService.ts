@@ -1,4 +1,4 @@
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 
 const requestTimeoutMillisecond = 15000;
 
@@ -46,15 +46,16 @@ postService.interceptors.response.use(
 );
 
 const service = {
-  get(apiPath: string) {
+  // * handle interceptor response type if needed
+  get<T = any, R = AxiosResponse<T>>(apiPath: string) {
     const url = process.env.API_ORIGIN + apiPath;
 
-    return getService.get(url);
+    return getService.get<T, R>(url);
   },
-  post(apiPath: string, payload: any) {
+  post<T = any, R = AxiosResponse<T>>(apiPath: string, payload: any) {
     const url = process.env.API_ORIGIN + apiPath;
 
-    return postService.post(url, payload);
+    return postService.post<T, R>(url, payload);
   }
 }
 
